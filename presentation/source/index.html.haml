@@ -1,0 +1,159 @@
+%section#intro
+
+  = image_tag "elasticsearch_logo.png"
+  -# %h3 ElasticSearch
+
+  %p
+    = image_tag "logo.png"
+    %br
+    = File.mtime(__FILE__).strftime("%d.%m.%Y")
+
+%section
+  %section
+    %h1 Features
+
+  %section
+    %h2
+      %blockquote
+        NoSQL
+
+    %ul
+      %li Speichert JSON-Dokumente
+      %li JSON-REST-API
+      %li Webscale&trade;
+
+%section
+  %section
+    %h2
+      %u Elastic
+      Search
+    %ul
+      %li Automatisches Sharding
+      %li Node-Discovery
+      %li Query wird auf Nodes verteilt
+      %li Java &rarr; relativ einfach zu betreiben
+
+  %section.image-slide
+    %h2 Demo
+    %pre
+      %code clear &amp;&amp; ttyplay -s 2 ttyrecord
+    %pre
+      %code clear &amp;&amp; ttyplay -s 2 ttyrecord2
+
+    -# <div><script id="playterm-MjAxNC0wNC90dHlyZWNvcmQtMTM5NjY5MzAwMXwxMjB4MzU=" type="text/javascript" src="http://playterm.org/js/?hash=MjAxNC0wNC90dHlyZWNvcmQtMTM5NjY5MzAwMXwxMjB4MzU=" class="size:120x35"></script></div>
+%section
+  %section
+    %h2
+      Elastic
+      %u Search
+
+    %p  Basiert auf Apache Lucene
+    %ul
+      %li
+        Morphologische/Linguistische Features
+        %br
+        %small bm25, tokenizing, stemming, decompounding, ngram, ...
+      %li
+        %a(href='http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-filters.html') Filter
+        %br
+        %small Geodistance, Range (&gt;, &lt;, ...), Regex,
+
+  %section
+    %h3 Weiteres
+    %ul
+      %li
+        Suggest
+        %br
+        %small Autocompletion, Meinten Sie?,
+
+        %q Meinten Sie?
+      %li
+        Percolate
+        %br
+        %small Queries indizieren und Dokumente draufwerfen
+      %li
+        More like this (mlt)
+        %br
+        %small find similiar documents to a specific document
+
+      %li Facets &amp; Aggregations
+
+  %section{ 'data-background'=>image_path('facets.png')}
+    -# = image_tag 'facets.png'
+
+%section
+  %section
+    %h2 Plugins
+    %ul
+      %li
+        %a(href='http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-plugins.html#river') River
+        %br
+        %small Twitter, RabbitMQ, Wikipedia, RSS, Dropbox, <a href='https://github.com/ncolomer/elasticsearch-osmosis-plugin/'>OSM</a>
+      %li
+        %a(href='http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-plugins.html#analysis-plugins') Analyzer
+        %br
+        %small CJK
+      %li
+        Frontends
+        %br
+        %small HQ, Kibana, Inquisitor
+  %section{ 'data-background'=>image_path('kibana1.png')}
+  %section{ 'data-background'=>image_path('inquisitor.png')}
+
+  %section
+    %ul
+      %li
+        %a(href='http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html') viele Clients
+        %br
+        %small Ruby, Python, Node, PHP, Erlang, Go, Scala, Angular(!)
+      %li
+        %a(href='http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/integrations.html') Integrations
+        %br
+        %small Wordpress, Drupal
+
+
+%section
+  %section
+    %h2 Use-Cases
+    %ul
+      %li
+        Search
+        %p
+          %small z.B. XING, Github, SoundCloud, StumbleUpon, Stackoverflow
+      %li
+        Logging
+        %p
+          %small Logstash &amp; Graylog2
+  %section{ 'data-background'=>image_path('logstash.png')}
+
+  %section{ 'data-background'=>image_path('graylog.png')}
+  %section
+    %h2 Caveat
+
+    %ul
+      %li
+        %p No authentication/authorization whatsoever!
+        %p &rarr; HTTP-Proxy, Internes Netzwerk
+      %li RAM (Java), Oracle JRE wird empfohlen
+%section
+  %ul.fa-ul(style='list-style-type: none')
+    %li
+      %span.fa.fa-github.fa-li
+      %a(href='https://github.com/zealot128') zealot128
+    %li
+      %span.fa.fa-twitter.fa-li
+      %a(href='https://twitter.com/stefanwienert') @stefanwienert
+    %li
+      %span.fa.fa-home.fa-li
+      %a(href='http://stefanwienert.de') stefanwienert.de
+    %li
+      %span.fa.fa-suitcase.fa-li
+      %a(href='http://www.pludoni.de') pludoni GmbH
+
+  %p
+    %br
+  %h2 Fragen?
+
+  %p
+    %code
+      curl http://localhost:9200/wdcm/questions

@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title= data.page.title || "Presentation"
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Fresca' rel='stylesheet' type='text/css'></link>
+    = stylesheet_link_tag "all"
+    = javascript_include_tag "head.min.js"
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  %body{:class => page_classes}
+    .reveal
+      .state-background
+        .slides
+          = yield
+        %aside.controls
+          %a.left(href='#') &#x25C4;
+          %a.right(href="#") &#x25BA;
+          %a.up(href="#") &#x25B2;
+          %a.down(href="#") &#x25BC;
+        .progress
+          %span
+
+    = javascript_include_tag  "all.js"
+
