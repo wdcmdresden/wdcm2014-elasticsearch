@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <title>Presentation</title>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Fresca' rel='stylesheet' type='text/css'></link>
+    <link href="stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="javascripts/head.min.js" type="text/javascript"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body class='index'>
+    <div class='reveal'>
+      <div class='state-background'>
+        <div class='slides'>
+          <section id='intro'>
+  <img src="images/elasticsearch_logo.png" />
+  <p>
+    <img src="images/logo.png" />
+    <br />
+    05.04.2014
+  </p>
+</section>
+<section>
+  <section>
+    <h1>Features</h1>
+  </section>
+  <section>
+    <h2>
+      <blockquote>
+        NoSQL
+      </blockquote>
+    </h2>
+    <ul>
+      <li>Speichert JSON-Dokumente</li>
+      <li>JSON-REST-API</li>
+      <li>Webscale&trade;</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>
+      <u>Elastic</u>
+      Search
+    </h2>
+    <ul>
+      <li>Automatisches Sharding</li>
+      <li>Node-Discovery</li>
+      <li>Query wird auf Nodes verteilt</li>
+      <li>Java &rarr; relativ einfach zu betreiben</li>
+    </ul>
+  </section>
+  <section class='image-slide'>
+    <h2>Demo</h2>
+    <pre><code>clear &amp;&amp; ttyplay -s 2 ttyrecord</code></pre>
+    <pre><code>clear &amp;&amp; ttyplay -s 2 ttyrecord2</code></pre>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>
+      Elastic
+      <u>Search</u>
+    </h2>
+    <p>Basiert auf Apache Lucene</p>
+    <ul>
+      <li>
+        Morphologische/Linguistische Features
+        <br />
+        <small>bm25, tokenizing, stemming, decompounding, ngram, ...</small>
+      </li>
+      <li>
+        <a href='http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-filters.html'>Filter</a>
+        <br />
+        <small>Geodistance, Range (&gt;, &lt;, ...), Regex,</small>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h3>Weiteres</h3>
+    <ul>
+      <li>
+        Suggest
+        <br />
+        <small>Autocompletion, Meinten Sie?,</small>
+        <q>Meinten Sie?</q>
+      </li>
+      <li>
+        Percolate
+        <br />
+        <small>Queries indizieren und Dokumente draufwerfen</small>
+      </li>
+      <li>
+        More like this (mlt)
+        <br />
+        <small>find similiar documents to a specific document</small>
+      </li>
+      <li>Facets &amp; Aggregations</li>
+    </ul>
+  </section>
+  <section data-background='images/facets.png'>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Plugins</h2>
+    <ul>
+      <li>
+        <a href='http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-plugins.html#river'>River</a>
+        <br />
+        <small>Twitter, RabbitMQ, Wikipedia, RSS, Dropbox, <a href='https://github.com/ncolomer/elasticsearch-osmosis-plugin/'>OSM</a></small>
+      </li>
+      <li>
+        <a href='http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-plugins.html#analysis-plugins'>Analyzer</a>
+        <br />
+        <small>CJK</small>
+      </li>
+      <li>
+        Frontends
+        <br />
+        <small>HQ, Kibana, Inquisitor</small>
+      </li>
+    </ul>
+  </section>
+  <section data-background='images/kibana1.png'></section>
+  <section data-background='images/inquisitor.png'></section>
+  <section>
+    <ul>
+      <li>
+        <a href='http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/clients.html'>viele Clients</a>
+        <br />
+        <small>Ruby, Python, Node, PHP, Erlang, Go, Scala, Angular(!)</small>
+      </li>
+      <li>
+        <a href='http://www.elasticsearch.org/guide/en/elasticsearch/client/community/current/integrations.html'>Integrations</a>
+        <br />
+        <small>Wordpress, Drupal</small>
+      </li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Use-Cases</h2>
+    <ul>
+      <li>
+        Search
+        <p>
+          <small>z.B. XING, Github, SoundCloud, StumbleUpon, Stackoverflow</small>
+        </p>
+      </li>
+      <li>
+        Logging
+        <p>
+          <small>Logstash &amp; Graylog2</small>
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section data-background='images/logstash.png'></section>
+  <section data-background='images/graylog.png'></section>
+  <section>
+    <h2>Caveat</h2>
+    <ul>
+      <li>
+        <p>No authentication/authorization whatsoever!</p>
+        <p>&rarr; HTTP-Proxy, Internes Netzwerk</p>
+      </li>
+      <li>RAM (Java), Oracle JRE wird empfohlen</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <ul class='fa-ul' style='list-style-type: none'>
+    <li>
+      <span class='fa fa-github fa-li'></span>
+      <a href='https://github.com/zealot128'>zealot128</a>
+    </li>
+    <li>
+      <span class='fa fa-twitter fa-li'></span>
+      <a href='https://twitter.com/stefanwienert'>@stefanwienert</a>
+    </li>
+    <li>
+      <span class='fa fa-home fa-li'></span>
+      <a href='http://stefanwienert.de'>stefanwienert.de</a>
+    </li>
+    <li>
+      <span class='fa fa-suitcase fa-li'></span>
+      <a href='http://www.pludoni.de'>pludoni GmbH</a>
+    </li>
+  </ul>
+  <p>
+    <br />
+  </p>
+  <h2>Fragen?</h2>
+  <p>
+    <code>curl http://localhost:9200/wdcm/questions</code>
+  </p>
+</section>
+        </div>
+        <aside class='controls'>
+          <a class='left' href='#'>&#x25C4;</a>
+          <a class='right' href='#'>&#x25BA;</a>
+          <a class='up' href='#'>&#x25B2;</a>
+          <a class='down' href='#'>&#x25BC;</a>
+        </aside>
+        <div class='progress'>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <script src="javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>
